@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    /* é uma propriedade CSS que altera o modelo de caixa padrão usado para calcular as larguras (widths) e alturas (heights) dos elementos. */
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+section {
+    /* A propriedade position: relative; no CSS é usada para posicionar um elemento de forma relativa à sua posição normal na página */
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    /* espaçamento interno */
+    padding: 100px;
+    /* cor de fundo */
+    background: #121212;
+
+    /* torna os intens flex: ; */
+    display: flex;
+    /* leva os itens ao centro */
+    align-items: center;
+    /* dar um leve espaço  entre as letras como menu etc.. */
+    justify-content: space-between;
+    /* define overflow: hidden; para um elemento, qualquer conteúdo que exceda o tamanho da caixa do elemento será cortado e não será visível */
+    overflow: hidden;
+
+}
+
+.circle {
+
+    /* position: absolute; é uma propriedade CSS que permite posicionar um elemento de forma absoluta em relação ao seu contêiner pai mais próximo */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e51e2a;
+    /* cria um circulo em volta  */
+    clip-path: circle(40% at bottom right);
+
+
+}
+
+header {
+    position: absolute;
+    /* cima */
+    top: 0;
+    /* esquerda */
+    left: 0;
+    /* largura */
+    width: 100%;
+    /* espaçamento interno */
+    padding: 40px;
+    /* alinhamento um do lado do outro */
+    display: flex;
+    /* centralizou  meus itens ao centro */
+    align-items: center;
+    /* separa o logo dos menus um para um lado e outro para outro */
+    justify-content: space-between;
+}
+
+.logo {
+    position: relative;
+    width: 150px;
+    max-width: 200px;
+
+
+
+
+
+}
+
+
+.logo {
+    transition: 0.5s ease-in-out;
+}
+
+.logo:hover {
+
+    transform: translateY(-10px);
+
+}
+
+.navegaçao ul {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+
+
+}
+
+.navegaçao li {
+    list-style: none;
+    color: rgb(230, 230, 230);
+
+}
+
+.navegaçao a {
+    color: rgb(175, 172, 172);
+    text-decoration: none;
+    /* Essa propriedade combina as características dos valores inline e block */
+    display: inline-block;
+    /* é usada para definir a espessura (ou "peso") do texto. O valor 500 indica uma espessura intermediária entre o normal (geralmente 400) e o negrito (geralmente 700). */
+    font-weight: 500;
+
+    font-size: 30px;
+
+    margin-left: 200px;
+}
+
+
+
+.navegaçao li {
+/* Suaviza a transição de cor */
+    transition: color 0.5s ease-in-out;
+
+}
+
+
+.navegaçao li:hover{
+
+
+color: #e51e2a;
+
+}
+
+
+.navegaçao li{
+
+margin: 0 15px;
+position: relative;
+
+
+}
+
+
+/* Pseudo-elemento para a risca */
+.navegaçao li:after{
+
+content: '';
+
+display: block;
+
+width: 0;
+/* Altura da risca */
+height: 2px;
+
+background: rgb(234, 255, 0); /* Cor da risca */
+
+/* * Transição suave da largura */ 
+transition: width 0.5s ease-in-out;
+
+
+position: absolute;
+
+left: 0;
+
+bottom: 0;
+}
+/* Estilos para a risca ao passar o mouse */
+.navegaçao li:hover::after{
+
+/* Aumenta a largura da risca */
+width: 100%
+
+
+}
+
+
+
+
+
+
+.container {
+    position: relative;
+    width: 1000%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+.texto {
+    position: relative;
+    max-width: 600px;
+    margin-right: 20px;
+
+}
+
+.texto h2 {
+
+    color: white;
+    font-size: 50px;
+
+    /* margin-bottom:  seria para dar um espaçamento na parte de baixo; */
+    margin-bottom: 10px;
+    /* em para definir margens, preenchimento, alturas, larguras, e  */
+    line-height: 1.5em;
+    /* * é usada para definir a espessura (ou "peso") do texto. O valor 500 indica uma espessura intermediária entre o normal (geralmente 400) e o negrito (geralmente 700). */
+    */ font-weight: 700;
+}
+
+/* ESTOU ESTILANDO A PALAVRA QUE COLOQUEI DENTRO DO SPAN */
+.texto h2 span {
+
+    font-size: 100px;
+    color: #e51e2a;
+
+}
+
+
+.texto p {
+
+    color: white;
+
+
+}
+
+.texto a {
+
+    text-decoration: none;
+    color: white;
+    /* PARA DAR UM ESPAÇO ENTRE OS ELEMENTOS E NECESSARIO TER O display: inset-block: ; PARA CONSEGUIR DAR ESSE ESPAÇO */
+    display: inline-block;
+
+    margin-top: 20px;
+    padding: 10PX 26px;
+    background-color: #e51e2a;
+    font-weight: 500;
+
+
+
+    /* espaçamento entre as letras  */
+    letter-spacing: 3px;
+    border-radius: 50px;
+
+    /* fazer a transiçao da letra */
+    /* (ease-in-out): A transição começará lentamente, acelerará no meio e desacelerará no final. */
+    /* Duração (0.3s): A transição levará 0,3 segundos (300 milissegundos) para completar. */
+    transition: 0.3s ease-in-out;
+
+
+
+}
+
+/* obrigatorio ter  esse nome serve para que na hora o mouse passe por cima  */
+.texto a:hover {
+    /* translate Y  (E O EIXO QUE ESTA PEGANDO TEM DE OUTROS LADOS PODEMOS FAZER  DE VARIAS FORMA) */
+    /* transform permite aplicar transformações 2D e 3D a um elemento, como rotação, escala, translação e inclinação. */
+    transform: translateY(-10px);
+
+
+}
+
+.icones {
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icones img {
+
+    width: 60px;
+
+}
+
+.icones li {
+
+    list-style: none;
+    margin-left: 25px;
+}
+
+.icones a {
+    transition: 0.3s ease-in-out;
+
+}
+
+.icones a:hover {
+    transform: translateY(-10px);
+
+}
+
+
+
+.icones li{
+
+    margin: 0 15px;
+    position: relative;
+    
+    
+    }
+    
+    
+    /* Pseudo-elemento para a risca */
+    .icones li:after{
+    
+    content: '';
+    
+    display: block;
+    
+    width: 0;
+    /* Altura da risca */
+    height: 2px;
+    
+    background: rgb(234, 255, 0); /* Cor da risca */
+    
+    /* * Transição suave da largura */ 
+    transition: width 0.5s ease-in-out;
+    
+    
+    position: absolute;
+    
+    left: 0;
+    
+    bottom: 0;
+    }
+    /* Estilos para a risca ao passar o mouse */
+    .icones li:hover::after{
+    
+    /* Aumenta a largura da risca */
+    width: 100%
+    
+    
+    }
+    
+
+
+
+
+
+
+
+.boximg{
+
+position: absolute;
+right: 0;
+bottom: -40px;
+
+}
+
+.boximg img{
+
+width: 150px;
+
+}
+
+.img1{
+
+transform: rotate(-15deg);
+
+}
+
+.img2{
+
+    transform: rotate(5deg);
+
+}
+
+.img3{
+
+    transform: rotate(15deg);
+}
+
+.img4{
+
+    transform: rotate(-15eg);
+}
